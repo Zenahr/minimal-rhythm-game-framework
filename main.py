@@ -1,4 +1,7 @@
-from playsound import playsound
+import pyglet
+
+pyglet.resource.media('assets/sounds/base.wav', streaming=False)
+pyglet.resource.media('assets/sounds/snare.wav', streaming=False)
 
 song_1 = "10010010101001001010" # 1 -> drum, 0 -> snare
 song_2 = "100100101-10010---" # - -> pause
@@ -17,10 +20,8 @@ def play_song(song):
 def play(instrument):
     if(instrument == "base-drum"):
         # print("base-drum") # DEBUG
-        playsound('./assets/sounds/base.wav')
     elif(instrument == "snare-drum"):
         # print("snare-drum") # DEBUG
-        playsound('./assets/sounds/snare.wav')
     elif(instrument == "nothing"):
         # print("nothing") # DEBUG
         pass
