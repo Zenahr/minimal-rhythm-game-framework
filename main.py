@@ -23,4 +23,4 @@ def play(instrument):
         print("nothing")
 
 # play_song(song_1)
-playsound('audio.wav')
+playsound('./assets/sounds/base.wav')
