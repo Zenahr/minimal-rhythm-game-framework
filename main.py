@@ -1,7 +1,8 @@
 import pyglet
 
-pyglet.resource.media('assets/sounds/base.wav', streaming=False)
-pyglet.resource.media('assets/sounds/snare.wav', streaming=False)
+""" load assets in memory once on start"""
+base_sound = pyglet.resource.media('assets/sounds/base.wav', streaming=False)
+snare_sound = pyglet.resource.media('assets/sounds/snare.wav', streaming=False)
 
 song_1 = "10010010101001001010" # 1 -> drum, 0 -> snare
 song_2 = "100100101-10010---" # - -> pause
@@ -20,10 +21,13 @@ def play_song(song):
 def play(instrument):
     if(instrument == "base-drum"):
         # print("base-drum") # DEBUG
+        base_sound.play()
     elif(instrument == "snare-drum"):
         # print("snare-drum") # DEBUG
+        snare_sound.play()
     elif(instrument == "nothing"):
         # print("nothing") # DEBUG
         pass
 
-play_song(song_1)
+# play_song(song_1)
+snare_sound.play()
