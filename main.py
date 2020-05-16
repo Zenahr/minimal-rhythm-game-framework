@@ -1,7 +1,4 @@
-import os
-os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
-import pygame
-pygame.init()
+from playsound import playsound
 
 song_1 = "10010010101001001010" # 1 -> drum, 0 -> snare
 song_2 = "100100101-10010---" # - -> pause
@@ -26,4 +23,4 @@ def play(instrument):
         print("nothing")
 
 # play_song(song_1)
-
+playsound('audio.wav')
