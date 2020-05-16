@@ -16,11 +16,13 @@ def play_song(song):
 
 def play(instrument):
     if(instrument == "base-drum"):
-        print("base-drum")
+        # print("base-drum") # DEBUG
+        playsound('./assets/sounds/base.wav')
     elif(instrument == "snare-drum"):
-        print("snare-drum")
+        # print("snare-drum") # DEBUG
+        playsound('./assets/sounds/snare.wav')
     elif(instrument == "nothing"):
-        print("nothing")
+        # print("nothing") # DEBUG
+        pass
 
-# play_song(song_1)
-playsound('./assets/sounds/base.wav')
+play_song(song_1)
